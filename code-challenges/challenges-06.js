@@ -66,14 +66,14 @@ for( let i=0 ; i <=arr.length ;i++){
 
 const reverseArray = (arr)=>{
     // write your code here
-    let newArr=[];
-    for (let i=reverseArray.length-1 ; i >= 0; i--){
+    var tempArr=[];
+    for (var i=reverseArray.length-1 ; i >= 0; i--){
         
-        newArr.push(reverseArray[i]);
+        tempArr.push(reverseArray[i]);
         
 
     }
-    return newArr;
+    return tempArr;
 }
 // -------------------------------------------------------------------------------------------------------
 
