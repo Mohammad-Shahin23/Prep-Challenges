@@ -27,12 +27,12 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-  for (const property in object) {
-    
-    let arr1[i]=(`${property}: ${object[property]}`);
-    
-  }
   // write your code here
+  const arr = [];
+  for (const [name, age] of Object.entries(obj)) {
+    arr.push(`Customer Name :${name} , Age :${age}`);
+  }
+  return arr;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -59,7 +59,25 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   // write your code here
+  const arr = [];
+
+  // loop through each key-value pair in the object and format it as a string
+  for (const [key, value] of Object.entries(obj)) {
+    // format the ingredients array as a comma-separated string
+    if (key === "ingredients") {
+      arr.push(`${key}: ${value.join(",")}`);
+    } else {
+      arr.push(`${key}: ${value}`);
+    }
+  }
+
+  return arr;
+
 };
+
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -98,11 +116,23 @@ const courses = [
 ];
 
 const getInfo = (arr) => {
-  let coursesName = [];
-  let studentsName = [];
+  const courseNames = [];
+  const studentNames = [];
   // write your code here
 
-  return { coursesName, studentsName };
+  courses.forEach((course) => {
+
+    courseNames.push(courses.course);
+
+    course.students.forEach((students) => {
+
+      studentNames.push(students.name);
+
+    });
+    
+  });
+
+  return { courseNames, studentNames };
 };
 // -------------------------------------------------------------------------------------------------------
 
